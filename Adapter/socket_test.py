@@ -4,7 +4,7 @@ from ChineseSocket import ChineseSocket
 from BritishSocket import BritishSocket
 from AdapterSocket import AdapterSocket
 
-def canChargeforDigtalDevice(name, socket):
+def canChargeforDigitalDevice(name, socket):
     if socket.getNumOfPin() == 3 and socket.getTypeOfPin() == "八字扁型":
         isStandard = "符合"
         canCharge = "可以"
@@ -19,18 +19,18 @@ def canChargeforDigtalDevice(name, socket):
 class Socket(unittest.TestCase):
     def testChineseSocket(self):
         chineseSocket = ChineseSocket()
-        isMatch = canChargeforDigtalDevice(chineseSocket.getName(), chineseSocket.getSocket())
+        isMatch = canChargeforDigitalDevice(chineseSocket.getName(), chineseSocket.getSocket())
         self.assertEqual("符合", isMatch)
     
     def testBritishSocket(self):  
         britishSocket = BritishSocket()
-        isMatch = canChargeforDigtalDevice(britishSocket.name(), britishSocket.socketInterface())
+        isMatch = canChargeforDigitalDevice(britishSocket.name(), britishSocket.socketInterface())
         self.assertEqual("不符合", isMatch)
     
     def testAdapterSocket(self):
         britishSocket = BritishSocket()
         adapterSocket = AdapterSocket(britishSocket)
-        isMatch = canChargeforDigtalDevice(adapterSocket.getName(), adapterSocket.getSocket())
+        isMatch = canChargeforDigitalDevice(adapterSocket.getName(), adapterSocket.getSocket())
         self.assertEqual("符合", isMatch)
 
 
