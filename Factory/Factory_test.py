@@ -26,7 +26,5 @@ class FactoryTest(unittest.TestCase):
         self.assertEqual("橢圓畫筆", ellipse.getName())
         print('創造一隻: %s, id: %s, Type: %s' % (ellipse.getName(), id(ellipse), ellipse.getType()))
         
-        
-
 if __name__ == '__main__':
     unittest.main()
