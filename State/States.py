@@ -35,7 +35,7 @@ class LiquidState(State):
         return stateInfo >= 0 and stateInfo < 100
 
     def behavior(self, context):
-        print("Current state: ", context._getStateInfo())
+        print("Current state info:", context._getStateInfo())
 
 @singleton
 class GaseousState(State):
@@ -48,4 +48,4 @@ class GaseousState(State):
         return stateInfo >= 100
 
     def behavior(self, context):
-        print("Current state: ", context._getStateInfo())
+        print("Current state info:", context._getStateInfo())
