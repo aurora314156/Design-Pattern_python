@@ -8,7 +8,7 @@ class DeleteHandler(Handler):
         else:
             return 'This pokemon not in database.'
             
-    def self.pokemon_in_db(self, pokemon_identifier):
+    def pokemon_in_db(self, pokemon_identifier):
         db = Database().connect_to_db('0.0.0.0', 'rick', '12345678').db
         if pokemon_identifier in db:
             self.delete_pokemon_on_database()
